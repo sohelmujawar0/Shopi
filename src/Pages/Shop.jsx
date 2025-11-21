@@ -3,7 +3,7 @@ import Hero from '../components/Hero'
 import Popular from '../components/Popular'
 import Offers from '../components/Offers'
 import NewCollections from "../components/NewCollections"
-import Newsletter from '../Components/NewsLetter'
+import Newsletter from '../components/NewsLetter'
 import Footer from '../Components/Footer'
 
 
