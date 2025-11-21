@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { ShopContext } from '../Context/ShopContext';
 import { useParams } from 'react-router-dom';
 import Bredcrums from '../components/BredCrums';
-import ProductDisplay from '../Components/ProductDisplay';
+import ProductDisplay from '../components/ProductDisplay';
 import Description from '../Components/Description';
 import RelatedProducts from '../components/RelatedProducts';
 const Product = () => {
