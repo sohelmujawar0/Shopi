@@ -1,37 +1,33 @@
-import React, { useContext } from 'react'
-import { ShopContext } from '../Context/ShopContext'
-import dropdown_icon from "../assets/dropdown_icon.png"
-import Item from '../components/Item'
+import React, { useContext } from "react";
+import { ShopContext } from "../Context/ShopContext";
+import dropdown_icon from "../assets/dropdown_icon.png";
+import Item from "../components/Item";
 
 const ShopCategory = (props) => {
   const { all_product } = useContext(ShopContext);
 
   return (
     <div className="shop-category">
-
-      {/* Banner */}
       <img
-        className="block w-[82%] mx-auto my-[30px]"
+        className="w-full max-w-screen-xl mx-auto my-6 px-4"
         src={props.banner}
         alt=""
       />
 
-      {/* Index + Sort */}
-      <div className="flex justify-between items-center mx-[170px]">
-        <p className="text-[18px]">
+      <div className="max-w-screen-xl mx-auto px-4 mt-4 flex flex-col sm:flex-row justify-between sm:items-center gap-3">
+        <p className="text-[16px] sm:text-[18px]">
           <span className="font-semibold">Showing 1-12</span> out of 36 products
         </p>
 
-        <div className="px-[20px] py-[10px] rounded-[40px] border border-[#888] flex items-center gap-2 cursor-pointer">
+        <div className="px-4 py-2 rounded-[40px] border border-[#888] flex items-center gap-2 cursor-pointer w-fit">
           Sort by
-          <img src={dropdown_icon} alt="" className="h-[20px]" />
+          <img src={dropdown_icon} alt="" className="h-[18px]" />
         </div>
       </div>
 
-      {/* Products Grid */}
-      <div className="grid grid-cols-4 mx-[170px] mt-[20px] gap-y-[80px]">
-        {all_product.map((item, i) => {
-          return props.category === item.category ? (
+      <div className="max-w-screen-xl mx-auto px-4 mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-16 gap-x-4">
+        {all_product.map((item, i) =>
+          props.category === item.category ? (
             <Item
               key={i}
               id={item.id}
@@ -40,12 +36,11 @@ const ShopCategory = (props) => {
               new_price={item.new_price}
               old_price={item.old_price}
             />
-          ) : null;
-        })}
+          ) : null
+        )}
       </div>
 
-      {/* Load More */}
-      <div className="flex justify-center items-center w-[200px] h-[60px] mx-auto my-[70px] rounded-[75px] bg-[#ededed] text-[#272424] text-[18px] font-medium cursor-pointer">
+      <div className="flex justify-center items-center w-[160px] h-[50px] sm:w-[200px] sm:h-[60px] mx-auto my-12 rounded-[75px] bg-[#ededed] text-[#272424] text-[16px] sm:text-[18px] font-medium cursor-pointer">
         Explore More
       </div>
     </div>

@@ -1,17 +1,17 @@
-import React from 'react'
-import Item from "./Item"
-import data_product from '../../src/assets/data'
+import React from "react";
+import Item from "./Item";
+import data_product from "../../src/assets/data";
 
 const Popular = () => {
   return (
-    <div className="flex flex-col items-center gap-3 h-[90vh]">
-      <h1 className="text-[#171717] text-4xl font-semibold">
+    <div className="flex flex-col items-center gap-3 py-16 px-4 sm:px-6 md:px-10">
+      <h1 className="text-[#171717] text-2xl sm:text-3xl md:text-4xl font-semibold text-center">
         POPULAR IN WOMEN
       </h1>
 
-      <hr className="w-[200px] h-[6px] rounded-[10px] bg-[#252525]" />
+      <hr className="w-40 h-1.5 sm:h-2 rounded-lg bg-[#252525]" />
 
-      <div className="mt-12 flex gap-8 flex-wrap justify-center">
+      <div className="mt-12 flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-10 w-full max-w-screen-xl">
         {data_product.map((item, i) => (
           <Item
             key={i}
@@ -24,7 +24,7 @@ const Popular = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Popular
+export default Popular;

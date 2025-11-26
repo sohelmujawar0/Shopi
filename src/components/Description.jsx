@@ -2,21 +2,19 @@ import React from "react";
 
 const Description = () => {
   return (
-    <div className="my-[80px] mx-[50px]">
-      {/* Top Navigator */}
-      <div className="flex">
-        <div className="flex items-center justify-center text-[16px] font-semibold w-[150px] h-[50px] border border-[#d0d0d0]">
+    <div className="max-w-screen-xl mx-auto px-4 my-16">
+      <div className="flex flex-wrap">
+        <div className="flex items-center justify-center text-[14px] sm:text-[16px] font-semibold w-[130px] sm:w-[150px] h-[45px] sm:h-[50px] border border-[#d0d0d0]">
           Description
         </div>
 
-        <div className="flex items-center justify-center text-[16px] font-semibold w-[150px] h-[50px] border border-[#d0d0d0] bg-[#fbfbfb] text-[#555]">
+        <div className="flex items-center justify-center text-[14px] sm:text-[16px] font-semibold w-[130px] sm:w-[150px] h-[45px] sm:h-[50px] border border-[#d0d0d0] bg-[#fbfbfb] text-[#555]">
           Review (135)
         </div>
       </div>
 
-      {/* Description Box */}
-      <div className="flex flex-col gap-[20px] border border-[#D0D0D0] p-[40px] pb-[50px]">
-        <p>
+      <div className="flex flex-col gap-5 border border-[#D0D0D0] p-6 sm:p-10 mt-4">
+        <p className="text-[14px] sm:text-[16px] leading-relaxed">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium
           reiciendis exercitationem amet totam nisi ullam cumque fugit magnam
           laudantium. Quis eos quam alias nisi explicabo ut, itaque qui fuga
@@ -33,7 +31,7 @@ const Description = () => {
           Culpa facilis deserunt iure asperiores.
         </p>
 
-        <p>
+        <p className="text-[14px] sm:text-[16px] leading-relaxed">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
           doloremque facilis neque non nihil quam veritatis a. Ratione dolore
           debitis quia possimus natus quo consequatur exercitationem quae unde,
